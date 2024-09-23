@@ -1,0 +1,117 @@
+header {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+
+/* --------------toggle switch style------------------*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 32px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #635FC7;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.custom-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--link-color);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: var(--link-color);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s linear;
+    }
+
+    &:hover {
+        color: var(--link-color-hover);
+    }
+
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+        height: 2px;
+        background-color: var(--link-color-hover);
+        color: var(--link-color-hover);
+    }
+}
+
+.custom-menu-btn {
+    border: 0;
+    box-shadow: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+.collapsing {
+    ul {
+        align-items: flex-end !important;
+    }
+}
+
+.show {
+    ul {
+        align-items: flex-end !important;
+    }
+}

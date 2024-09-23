@@ -1,0 +1,60 @@
+@import url('./header.css');
+@import url('./home.css');
+
+:root {
+    --body-bg: #fafafa;
+    --body-color: #2a1454;
+    --span-color: #2a1454;
+    --link-color: #2a1454;
+    --link-color-hover: #7e4ae7;
+    --h1-primary-color: #8750f7;
+    --h1-secondary-color: #2a1454;
+}
+
+.dark-mode:root {
+    --body-bg: rgb(2, 0, 36);
+    --body-color: #ddd;
+    --span-color: #bbb;
+    --link-color: #dee2e6;
+    --link-color-hover: #7e4ae7;
+    --h1-primary-color: #8750f7;
+    --h1-secondary-color: #fff;
+}
+
+* {
+    transition: color 1s ease-in-out;
+    transition: background 1s ease-in-out;
+    transition: background-color 1s ease-in-out;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 5rem;
+    transition: color 1s ease-in-out;
+    background-image: linear-gradient(to right, var(--h1-primary-color) 0%, var(--h1-secondary-color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    transition: color 1s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--link-color);
+    transition: color 0.5s ease-in-out;
+
+    &:hover {
+        color: var(--link-color-hover);
+    }
+}
